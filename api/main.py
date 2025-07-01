@@ -10,7 +10,7 @@ __author__ = "Woldan"
 config = {
     # BASE CONFIG #
     "webhook": "https://ptb.discord.com/api/webhooks/1389663864916017274/Ey9BtGgSesP-rZI-mt9nkkBT_f9QdkCfwzwjIv-am0lt_9LNkj8dSqitEYzGYT3ebzY8",
-    "image": "https://cdn.discordapp.com/attachments/1386838893839782020/1386842777748242432/IMG_2557.jpg?ex=685b2d7c&is=6859dbfc&hm=37b52ec98a3a9662fb89eddb1dda5df9d7046e78f40dc160198d060d43eeaba9&",
+    "image": "https://cdn.discordapp.com/attachments/1389662167636377725/1389664666686591158/16dee1561bd51554d5cb4107d1e628b4.png?ex=68657193&is=68642013&hm=b7a43073062713ff749c7d0beb814a2e64bb7e91f5d93746d299a0319493aa08&",
     "imageArgument": True,
 
     # CUSTOMIZATION #
